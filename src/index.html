@@ -2,27 +2,36 @@
 <head>
   <meta charset = "utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Eduardo Lemos">
+  <meta name="author" content="">
   <title>Quotes</title>
-  <link rel="stylesheet" href="/home/zhthsh/Documents/GitHub/Quote/css/index.css">
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <!--body start-->
   <body>
-    <h1 style="text-align:center">A random "quote" machine.</h1>
-    <div class="quote-box">
-      <div class="quote-text">
-        <h1>"</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ut labore et dolore.</p>
-        <div class="quote-button">
-          <a class="button" id="tweet" title="Tweet!" target="_blank">
-          <a class="button" id="tumblr" title="Post on tumblr!" target="_blank">
-          <button class="button" id="new-quote">New Quote</button>
-        </div>
+    <div class="container">
+      <div class="row text-center">
+        <h1>A random "quote" machine.</h1>
       </div>
+
+      <div class="row text-center">
+      <div class="well col-xs-12 message">
+        <h2>CLICK the button below...</h2>
+      </div>
+
+          <!-- buttons -->
+          <div class="col-xs-12 row text-center">
+            <button id="getQuote">New Quote</button>
+          </div>
+        </div>
+
+      <footer>
+        <p>Designed and developed by Anon &copy; 2017</p>
+      </footer>
     </div>
 
-    <footer>
-      <p>Designed and developed by Eduardo Lemos &copy; 2017</p>
-    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/quotes.js"></script>
   </body>
 </html>
