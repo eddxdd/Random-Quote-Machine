@@ -1,38 +1,5 @@
-body {
-   background-color: #42e2c0;
-   display: flex;
-   flex-direction: column;
-   margin: 5%;
- }
-
-h1{
-  font-family: monospace;
-  font-size: 30px;
-}
-
-.quote-text h1{
-  margin: 0;
-  height: 3%;
-  font-size: 30px;
-}
-
-.quote-text p{
-  text-align: center;
-  margin: 0;
-}
-
-.quote-box{
-    border-radius:5px;
-    margin: auto auto 0 auto;
-    width:450px;
-    padding:40px 50px 0 50px;
-    background-color:#fff;
-}
-
-button{
-   float: right;
-   margin-top: 15px;
-   padding: auto 10px auto 10px;;
+.container{
+  background-color: #42e2c0;
 }
 
 footer {
