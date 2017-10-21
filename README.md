@@ -1,2 +1,5 @@
 # Random-Quote-Machine
-* Need to finish implementing Tweeter api/button
+Basic random-quote-machine. 
+
+JavaScript, JQuery, JSON, Ajax, Bootstrap
+Implemented Twitter API
