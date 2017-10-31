@@ -1,6 +1,6 @@
 // Random Quote Generator
 // Quote API
-var url = "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en&json=?";
+var url = "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?";
 
 // Twitter
 var getQuote = function(data) {
@@ -18,10 +18,10 @@ var getQuote = function(data) {
 
 
 $(document).ready(function() {
-  $.getJSON(url, getQuote, 'json');
+  $.getJSON(url, getQuote, 'jsonp');
 });
 
 // Quote on click
 $("#getQuote").click(function() {
-  $.getJSON(url, getQuote, 'json');
+  $.getJSON(url, getQuote, 'jsonp');
 });
