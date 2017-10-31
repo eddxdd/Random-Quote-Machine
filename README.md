@@ -1,4 +1,4 @@
-# Random-Quote-Machine
+# Random-Quotes
 Basic random-quote-machine. 
 
 * JavaScript, JQuery, JSON, APIs, Bootstrap.
