@@ -1,5 +1,5 @@
 # Random-Quotes
-Basic random-quote-machine. 
+A random-quotes website that utilizes API
 
 * JavaScript, JQuery, JSON, APIs, Bootstrap.
 
