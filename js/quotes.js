@@ -1,27 +1,31 @@
-// Random Quote Generator
-// Quote API
-var url = "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?";
+document.querySelector('.get-jokes').addEventListener('click', getJokes);
 
-// Twitter
-var getQuote = function(data) {
-  $(".quote-text").text(data.quoteText);
+function getJokes(e) {
+  const number = document.querySelector('input[type="number"]').value;
 
-  var tweetMe = 'https://twitter.com/intent/tweet?text=' + data.quoteText + ' Author ' + data.quoteAuthor;
+  const xhr = new XMLHttpRequest();
 
-  if (data.quoteAuthor === '') {
-    data.quoteAuthor = 'Unknown';
+  xhr.open('GET', `http://api.icndb.com/jokes/random/${number}`, true);
+
+  xhr.onload = function() {
+    if(this.status === 200) {
+      const response = JSON.parse(this.responseText);
+      
+      let output = '';
+
+      if(response.type === 'success') {
+        response.value.forEach(function(joke){
+          output += `<li>${joke.joke}</li>`;
+        });
+      } else {
+        output += '<li>Something went wrong</li>';
+      }
+
+      document.querySelector('.jokes').innerHTML = output;
+    }
   }
 
-  $(".author-text").text('Author: ' + data.quoteAuthor);
-  $(".twitter-share-button").attr("href", tweetMe);
-};
+  xhr.send();
 
-
-$(document).ready(function() {
-  $.getJSON(url, getQuote, 'jsonp');
-});
-
-// Quote on click
-$("#getQuote").click(function() {
-  $.getJSON(url, getQuote, 'jsonp');
-});
+  e.preventDefault();
+}
