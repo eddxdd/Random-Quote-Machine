@@ -1,4 +1,3 @@
-# Random-Quotes
-A random-quotes website that utilizes API
+https://eddxdd.github.io/js-random-quotes/
 
-https://eddxdd.github.io/Random-Quotes/
+JavaScript, was just practicing some more APIs.
